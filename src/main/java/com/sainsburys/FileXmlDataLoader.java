@@ -38,11 +38,13 @@ public class FileXmlDataLoader {
             NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(doc, XPathConstants.NODESET);
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Node nNode = nodeList.item(i);
-                System.out.println("Current Element :" + nNode.getNodeName());
+                System.out.println("\nCurrent Element :" + nNode.getNodeName());
 //                System.out.println("All Element value:" + nNode.getTextContent());
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
-                    System.out.println("\nItemID  : " + eElement.getElementsByTagName("ItemID").item(0).getTextContent());
+                    System.out.println("MerchandiseHierarchy : " + eElement.getElementsByTagName("MerchandiseHierarchy").item(0).getTextContent());
+                    System.out.println("Quantity : " + eElement.getElementsByTagName("Quantity").item(0).getTextContent());
+                    System.out.println("ItemID  : " + eElement.getElementsByTagName("ItemID").item(0).getTextContent());
                     System.out.println("Description  : " + eElement.getElementsByTagName("Description").item(0).getTextContent());
                     System.out.println("RegularSalesUnitPrice  : " + eElement.getElementsByTagName("RegularSalesUnitPrice").item(0).getTextContent());
                 }
