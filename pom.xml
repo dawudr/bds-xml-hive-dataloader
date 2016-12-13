@@ -73,6 +73,12 @@
         <version>0.14.0</version>
     </dependency>
     -->
+    <!-- https://mvnrepository.com/artifact/net.sf.saxon/Saxon-HE -->
+    <dependency>
+      <groupId>net.sf.saxon</groupId>
+      <artifactId>Saxon-HE</artifactId>
+      <version>9.7.0-14</version>
+    </dependency>
   </dependencies>
 
   <build>

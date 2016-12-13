@@ -90,7 +90,7 @@ public class HiveJdbcDataLoader {
 
 
 //            String tableLocation = "wasb://azimhdi32@azimasvwest.blob.core.windows.net/testdataloadcsv";
-            sql = "CREATE EXTERNAL TABLE " + tableName + "(MerchandiseHierarchy string, ItemID string, Description string, RegularSalesUnitPrice string, Quantity string)" +
+            sql = "CREATE EXTERNAL TABLE IF NOT EXISTS " + tableName + "(MerchandiseHierarchy string, ItemID string, Description string, RegularSalesUnitPrice string, Quantity string)" +
                     "ROW FORMAT DELIMITED FIELDS TERMINATED BY ' '" +
                     "STORED AS TEXTFILE";
 //                    "STORED AS TEXTFILE LOCATION '" + tableLocation + "'";
